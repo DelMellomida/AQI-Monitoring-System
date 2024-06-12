@@ -7,26 +7,22 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             event.currentTarget.classList.add('active');
             
-            // Hide all content sections
             var contents = document.querySelectorAll('.content');
             contents.forEach(function(content) {
                 content.style.display = 'none';
             });
             
-            // Show the active content section
             var activeContent = document.querySelector(event.currentTarget.getAttribute('href'));
             activeContent.style.display = 'block';
         });
     });
     
-    // Initially hide all content sections except the dashboard
     var contents = document.querySelectorAll('.content');
     contents.forEach(function(content) {
         content.style.display = 'none';
     });
     document.getElementById('dashboard').style.display = 'block';
 
-    // Create charts
     createCharts();
 });
 
