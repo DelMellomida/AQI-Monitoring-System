@@ -43,22 +43,22 @@
             </div>
             <div class="chart-item">
                 <h2>Temperature</h2>
-                <p>Current temperature is 25°C</p>
+                <p>Current temperature is <span id="currentTemperature">25°C</span></p>
                 <canvas id="dashboardTemperatureChart"></canvas>
             </div>
             <div class="chart-item">
                 <h2>Humidity</h2>
-                <p>Current humidity is 60%</p>
+                <p>Current humidity is <span id="currentHumidity">60%</span></p>
                 <canvas id="dashboardHumidityChart"></canvas>
             </div>
             <div class="chart-item">
                 <h2>CO2 Levels</h2>
-                <p>Current CO2 level is 450 ppm</p>
+                <p>Current CO2 level is <span id="currentCO2">450 ppm</span></p>
                 <canvas id="dashboardCo2Chart"></canvas>
             </div>
             <div class="chart-item">
                 <h2>CO Levels</h2>
-                <p>Current CO level is 3 ppm</p>
+                <p>Current CO level is <span id="currentCO">3 ppm</span></p>
                 <canvas id="dashboardCoChart"></canvas>
             </div>
         </div>
@@ -90,9 +90,7 @@
         <p>CO (Carbon Monoxide) is a colorless, odorless, and tasteless gas that is toxic to humans and animals when encountered in higher concentrations. It's produced by the incomplete combustion of carbon-containing fuels such as gasoline, natural gas, and wood.</p>
         <p>Current CO level: <span id="currentCO">3 ppm</span></p>
         <canvas id="coChart"></canvas>
-    </div>
-    
-    
+    </div>    
 
     <script src="/js/script.js"></script>
 </body>
