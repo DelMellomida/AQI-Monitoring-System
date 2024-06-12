@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Quality Monitoring System</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <a class="active" href="#dashboard">Dashboard</a>
+        <a href="#humidity">Humidity</a>
+        <a href="#temperature">Temperature</a>
+        <a href="#co2">CO2 Value</a>
+        <a href="#co">CO Value</a>
+    </div>
+
+    <div class="content" id="dashboard">
+        <h1>Air Quality Index Summary</h1>
+        <div class="dashboard-grid">
+            <div class="chart-item main-chart">
+                <h2>Air Quality Index</h2>
+                <p>Moderate AQI currently</p>
+                <canvas id="aqiChart"></canvas>
+            </div>
+            <div class="aqi-description">
+                <h3>AQI Descriptions</h3>
+                <ul>
+                    <li><strong>0-50:</strong> Good - Air quality is considered satisfactory, and air pollution poses little or no risk.</li>
+                    <li><strong>51-100:</strong> Moderate - Air quality is acceptable; however, there may be some pollutants that can pose a moderate health concern for a very small number of people who are unusually sensitive to air pollution.</li>
+                    <li><strong>101-150:</strong> Unhealthy for Sensitive Groups - Members of sensitive groups may experience health effects. The general public is not likely to be affected.</li>
+                    <li><strong>151-200:</strong> Unhealthy - Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects.</li>
+                    <li><strong>201-300:</strong> Very Unhealthy - Health alert: everyone may experience more serious health effects.</li>
+                    <li><strong>301-500:</strong> Hazardous - Health warnings of emergency conditions. The entire population is more likely to be affected.</li>
+                </ul>
+            </div>
+            <div class="info">
+                <h2>About Air Quality</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod urna nec nunc consequat, in efficitur justo dapibus. Nulla facilisi. Praesent et lectus vitae lacus lacinia feugiat.</p>
+                <h2>Predictive Analysis</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod urna nec nunc consequat, in efficitur justo dapibus. Nulla facilisi. Praesent et lectus vitae lacus lacinia feugiat.</p>
+            </div>
+            <div class="chart-item">
+                <h2>Temperature</h2>
+                <p>Current temperature is 25°C</p>
+                <canvas id="dashboardTemperatureChart"></canvas>
+            </div>
+            <div class="chart-item">
+                <h2>Humidity</h2>
+                <p>Current humidity is 60%</p>
+                <canvas id="dashboardHumidityChart"></canvas>
+            </div>
+            <div class="chart-item">
+                <h2>CO2 Levels</h2>
+                <p>Current CO2 level is 450 ppm</p>
+                <canvas id="dashboardCo2Chart"></canvas>
+            </div>
+            <div class="chart-item">
+                <h2>CO Levels</h2>
+                <p>Current CO level is 3 ppm</p>
+                <canvas id="dashboardCoChart"></canvas>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content" id="temperature">
+        <h1>Temperature</h1>
+        <p>The temperature is a measure of the warmth or coldness of an object or substance with reference to some standard value. In this context, it refers to the ambient air temperature.</p>
+        <p>Current temperature: <span id="currentTemperature">25°C</span></p>
+        <canvas id="temperatureChart"></canvas>
+    </div>
+    
+    <div class="content" id="humidity">
+        <h1>Humidity</h1>
+        <p>Humidity is the concentration of water vapor present in the air. It's an essential factor in determining the weather and climate of a region. High humidity can make the air feel warmer, while low humidity can make it feel cooler.</p>
+        <p>Current humidity: <span id="currentHumidity">60%</span></p>
+        <canvas id="humidityChart"></canvas>
+    </div>
+    
+    <div class="content" id="co2">
+        <h1>CO2 Value</h1>
+        <p>CO2 (Carbon Dioxide) is a colorless and odorless gas that is naturally present in the Earth's atmosphere. It's produced by the burning of fossil fuels, deforestation, and various natural processes. Monitoring CO2 levels is crucial for understanding indoor air quality and its impact on health.</p>
+        <p>Current CO2 level: <span id="currentCO2">450 ppm</span></p>
+        <canvas id="co2Chart"></canvas>
+    </div>
+    
+    <div class="content" id="co">
+        <h1>CO Value</h1>
+        <p>CO (Carbon Monoxide) is a colorless, odorless, and tasteless gas that is toxic to humans and animals when encountered in higher concentrations. It's produced by the incomplete combustion of carbon-containing fuels such as gasoline, natural gas, and wood.</p>
+        <p>Current CO level: <span id="currentCO">3 ppm</span></p>
+        <canvas id="coChart"></canvas>
+    </div>
+    
+    
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
